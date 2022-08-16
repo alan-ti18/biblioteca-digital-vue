@@ -1,9 +1,17 @@
 <template>
-  <q-input outlined v-model="text" :dense="dense">
-        <template v-slot:append>
-          <q-icon name="search" />
-        </template>
-      </q-input>
+  <q-input
+    class="input-search efeito-zoom"
+
+    standout="bg-default text-white"
+    style="background-color: white; border-radius: 4px"
+    v-model="text"
+    :dense="dense"
+    placeholder="Digite o que deseja buscar..."
+  >
+    <template v-slot:append>
+      <q-icon name="search" />
+    </template>
+  </q-input>
 </template>
 
 <script lang="ts">
@@ -21,6 +29,11 @@ export default defineComponent({
 })
 </script>
 
-<style>
+<style scoped>
+.input-search{
+  width: 95%;
+  max-width: 600px;
+  margin: 0 auto;
+}
 
 </style>

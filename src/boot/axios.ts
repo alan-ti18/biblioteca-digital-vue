@@ -13,7 +13,16 @@ declare module '@vue/runtime-core' {
 // good idea to move this instance creation inside of the
 // "export default () => {}" function below (which runs individually
 // for each client)
-const api = axios.create({ baseURL: 'https://api.example.com' })
+const axiosInstance = axios.create({ baseURL: '10.91.65.15:8080/biblioteca' })
+
+const api = {
+  post (endpoint: string, body: object) {
+    return axiosInstance.post(endpoint, body)
+  },
+  get (endpoint: string) {
+    return axiosInstance.get(endpoint)
+  }
+}
 
 export default boot(({ app }) => {
   // for use inside Vue files (Options API) through this.$axios and this.$api

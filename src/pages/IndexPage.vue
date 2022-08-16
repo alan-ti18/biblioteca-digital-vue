@@ -1,17 +1,17 @@
 <template>
-  <q-page class="column justify-evenly">
+  <q-page class="column q-mt-xl">
     <InputPesquisa />
-    <CardObra />
+    <CardsContainer />
   </q-page>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import InputPesquisa from 'src/components/InputPesquisa.vue'
-import CardObra from 'src/components/CardObra.vue'
+import CardsContainer from 'src/components/CardsContainer.vue'
 
 export default defineComponent({
   name: 'IndexPage',
-  components: { InputPesquisa, CardObra }
+  components: { InputPesquisa, CardsContainer }
 })
 </script>
